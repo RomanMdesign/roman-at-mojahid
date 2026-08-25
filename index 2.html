@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman at Mojahid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h1>💬 Roman at Mojahid</h1>
+      <p>Ilagay ang iyong pangalan para makapag-chat</p>
+      <form id="login-form">
+        <input type="text" id="username-input" placeholder="Pangalan mo..." required maxlength="20">
+        <button type="submit">Pumasok</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHAT SCREEN -->
+  <div id="chat-screen" class="screen hidden">
+    <div class="app-container">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <span id="my-name-display"></span>
+          <button id="logout-btn" title="Umalis">⏻</button>
+        </div>
+
+        <div class="chat-list">
+          <div class="chat-item active" id="group-chat-item" data-target="group" data-name="Group Chat">
+            <span class="chat-icon">👥</span>
+            <span class="chat-label">Group Chat</span>
+          </div>
+          <div class="sidebar-section-title">Mga Users</div>
+          <div id="users-list"></div>
+        </div>
+      </div>
+
+      <!-- MAIN CHAT AREA -->
+      <div class="main-chat">
+        <div class="chat-header">
+          <span id="current-chat-name">Group Chat</span>
+        </div>
+
+        <div id="messages-container" class="messages-container"></div>
+
+        <form id="message-form" class="message-form">
+          <input type="text" id="message-input" placeholder="Mag-type ng mensahe..." autocomplete="off" required>
+          <button type="submit">Ipadala</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
